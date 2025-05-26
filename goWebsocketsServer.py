@@ -198,7 +198,7 @@ async def handler(websocket):
             pass
 
 async def main():
-    async with serve(handler, "localhost", PORT) as server:
+    async with serve(handler, "0.0.0.0", PORT) as server:
         print(f"[Server]: Startup (Serving on port {PORT})")
         await server.serve_forever()
 
